@@ -1,0 +1,40 @@
+#include <windows.h>
+
+#include "../includes/constants.h"
+
+icone1 ICON "icone.ico"
+
+
+101 DIALOGEX 250, 250, 220, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter screenshots numbers"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Numbers of screenshots", -1, 10, 10, 80, 10
+
+    EDITTEXT 1001, 10, 25, 200, 14,
+             ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON "OK", IDOK,
+                  55, 45, 50, 14
+
+    PUSHBUTTON "Annuler", IDCANCEL,
+               115, 45, 50, 14
+END
+
+102 DIALOGEX 250, 250, 220, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter delay between each screenshot"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Delay time in secondes", -1, 10, 10, 80, 10
+
+    EDITTEXT 1002, 10, 25, 200, 14,
+             ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON "OK", IDOK,
+                  55, 45, 50, 14
+
+    PUSHBUTTON "Annuler", IDCANCEL,
+               115, 45, 50, 14
+END
